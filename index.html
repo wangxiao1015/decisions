@@ -473,8 +473,8 @@
                     element.classList.add('loaded');
                 }, 30);
             }
-        
-            // 全局实验数据对象
+        }; 
+        // 全局实验数据对象
         const EXPERIMENT = {
             // === 参与者信息 ===
             participantId: '',           // 参与者ID（姓名拼音首字母+出生年月）
@@ -1017,7 +1017,7 @@ ${finalData.final_ranking.map((rank, idx) => `  图片 ${idx} (ID: ${idx}) -> �
                     if (existingImgId !== null) {
                         EXPERIMENT.finalRanking[existingImgId] = draggedImgOldRank;
                         document.getElementById(`img-in-slot-${draggedImgOldRank}`).style.backgroundImage = 
-                            `url('${.imageUrls[existingImgId]}')`;
+                            `url('${CONFIG.imageUrls[existingImgId]}')`;
 targetSlotImgElement.classList.add('loaded'); // 添加这一行
                         document.getElementById(`slot-${draggedImgOldRank}`).classList.replace('empty', 'filled');
                         document.getElementById(`img-${existingImgId}`).classList.replace('in-slot', 'in-pool');
@@ -1240,4 +1240,5 @@ targetSlotImgElement.classList.add('loaded'); // 添加这一行
 </body>
 
 </html>
+
 
